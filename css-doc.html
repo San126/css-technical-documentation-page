@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styles.css">
+  <title>CSS Selectors</title>
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <header>
+        <h2>CSS Selectors</h2>
+        <hr class="header">
+      </header>
+      <table>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Type">Type</a>
+          </th>
+        </tr>
+        </tr>
+        <th>
+          <a class="nav-link" href="#Class">Class</a>
+        </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#ID">ID</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Universal">Universal</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Pseudo-class">Pseudo-class</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Pseudo-element">Pseudo-element</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Simple">Simple</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Descendant">Descendant</a>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            <a class="nav-link" href="#Grouped">Grouped</a>
+          </th>
+        </tr>
+      </table>
+    </nav>
+  </header>
+  <main id="main-doc">
+    <section id="Type" class="main-section">
+      <header>
+        <h3>Type</h3>
+      </header>
+      <p>These selectors match elements based on the name of their element type. The example above is using a type
+        selector to make every instance of p have bold text. You can use the type selector with any element. Here are a
+        few examples:
+      </p>
+      <br/>
+      <code>
+        div{
+   margin:7px;
+   padding:7px;
+ }
+</code>
+      <br/><br/>
+      <code>
+  body{
+   background-image:url("image.gif");
+   font-size:.9em;
+ }
+</code>
+    </section>
+    <hr>
+    <section id="Class" class="main-section">
+      <header>
+        <h3>Class</h3>
+      </header>
+      <p>The class selector selects HTML elements with a specific class attribute.
+
+        To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+      <p></p>
+      <article>
+        In this example all HTML elements with class="center" will be red and center-aligned:
+        <code>
+        .center {
+  text-align: center;
+  color: red;
+}
+</code>
+      </article>
+      <p>
+        You can also specify that only specific HTML elements should be affected by a class.
+      </p>
+      <article>
+        In this example only <strong>&ltP&gt</strong> elements with class="center" will be red and center-aligned:
+        <code>
+p.center {
+  text-align: center;
+  color: red;
+}
+  </code>
+      </article>
+      <p>HTML elements can also refer to more than one class.</p>
+      <article>
+        <p>In this example the
+        <p> element will be styled according to class="center" and to class="large": </p>
+        <code>
+          &ltp class="center large"&gtThis paragraph refers to two classes.&lt/p&gt
+        </code>
+      </article>
+    </section>
+    <hr>
+    <section id="ID" class="main-section">
+      <header>
+        <h3>ID</h3>
+      </header>
+      <p>The ID selector works with (X)HTML documents. It does not work with general XML documents unless the User Agent
+        (web browser or other document reader) can determine which attribute is the ID attribute for elements in the
+        document. In (X)HTML documents id is defined to be the ID attribute.
+      </p>
+      <p>
+        The ID selector is used to select a single item on a page. It matches the id attribute of an element. Two
+        elements on the same page must not have the same id attribute.</p>
+      <article>
+        <p>CSS rule:</p>
+        <code>
+           #onlyThisOne {
+   font-family:courier;
+ }
+        </code>
+        <p>Sample html:</p>
+        <code>
+          &ltp id="onlyThisOne"&gtCourier&lt/p&gt
+        </code>
+      </article>
+    </section>
+    <hr>
+    <section id="Universal" class="main-section">
+      <header>
+        <h3>Universal</h3>
+      </header>
+      <article>
+        <p>These selectors apply a style to all the items on the page. For example to make all the text on the page
+          green use the rule:</p>
+        <code>
+         * {
+   color:green;
+ }
+      </code>
+      </article>
+    </section>
+    <hr>
+    <section id="Pseudo-class" class="main-section">
+      <header>
+        <h3>Pseudo-class</h3>
+      </header>
+      <p>Pseudo-classes and pseudo-elements allow elements to be formatted on the basis of information other than the
+        position of the element in the document tree. Pseudo-class and pseudo-element selectors are prefixed by a colon,
+        <code class="individual">:</code>, in CSS1 and CSS2.1. In CSS3 pseudo-elements are prefixed by
+        <code class="individual">::</code>.
+      </p>
+      <article>
+
+        <p>CSS level 1 defines three pseudo-classes:</p>
+        <ul>
+          <li>
+            <p>unvisited links</p>
+            <code class="individual">link</code>
+          </li>
+          <li>
+            <p>visited links</p>
+            <code class="individual">visited</code>
+          </li>
+          <li>
+            <p>active links</p>
+            <code class="individual">active</code>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <p>These can only be applied to the anchor (a) elements.</p>
+        <code>
+           a:link{
+   color:blue;
+ }
+
+ a:visited{
+   color:purple;
+ }
+
+ a:active{
+   color:red;
+ }
+        </code>
+      </article>
+    </section>
+    <hr>
+    <section id="Pseudo-element" class="main-section">
+      <header>
+        <h3>Pseudo-element</h3>
+      </header>
+      <p>Pseudo-classes and pseudo-elements allow elements to be formatted on the basis of information other than the
+        position of the element in the document tree. Pseudo-class and pseudo-element selectors are prefixed by a colon,
+        <code class="individual">:</code>, in CSS1 and CSS2.1. In CSS3 pseudo-elements are prefixed by
+        <code class="individual">::</code>
+      </p>
+      <article>
+        <p>CSS level 1 defines two pseudo-elements, <code class="individual">first-letter</code> and
+          <code class="individual">first-line</code>, which select the first letter and line of the rendered element
+          respectively. These can be used to apply typographic effects, e.g. to create a drop cap at the start of a
+          paragraph.
+        </p>
+        <code>
+          p:first-letter { color:red }
+          </code>
+      </article>
+      <p>CSS2.1 adds two more pseudo-elements, <code class="individual">before</code> and
+        <code class="individual">after</code>
+      </p>
+    </section>
+    <hr>
+    <section id="Simple" class="main-section">
+      <header>
+        <h3>Simple</h3>
+      </header>
+      <p>The selectors described above (type, class, ID, universal, pseudo-class and pseudo-element) are all examples of
+        simple selectors. The full syntax for a simple selector is:
+      </p>
+      <ul>
+        <li>a type selector or the universal selector
+        </li>
+        <li>zero, one or more class, ID and pseudo-class selectors (CSS2.1 also allows attribute selectors)
+        </li>
+        <li>zero or one pseudo-element selectors
+        </li>
+      </ul>
+      <article>
+        <p>The following are all examples of simple selectors:
+        </p>
+        <code>
+          p
+  p.important
+  p#navigation
+  a:link
+  p:first-line
+  a:visited#homePage.menu2:first-letter
+  *
+  *#footer
+  *.content.abstract
+  *#mainArticle:first-letter
+      </code>
+      </article>
+    </section>
+    <hr>
+    <section id="Descendant" class="main-section">
+      <header>
+        <h3>Descendant</h3>
+      </header>
+      <p>Descendant selectors allow you to apply style to elements that are nested within another specified element. For
+        example, you could have every <code class="individual">span</code> element inside of every
+        <code class="individual">p</code> element be bold. The <code class="individual">span</code> can be a child
+        element of the <code class="individual">p</code> element, or a grandchild, or a great-grandchild, etc.
+      </p>
+      <article>
+        <p>CSS rule:</p>
+        <code>
+         p span{
+   font-weight:bold;
+ }
+ </code>
+        <p>Sample HTML:</p>
+        <code>
+          &ltp&gtStart of paragraph. &ltspan&gtThis span is bold.&lt/span&gt Rest of paragraph.&lt/p&gt
+ &ltdiv&gtStart of division. &ltspan&gtThis span is normal.&lt/span&gt Rest of division.&lt/div&gt
+        </code>
+      </article>
+    </section>
+    <hr>
+    <section id="Grouped" class="main-section">
+      <header>
+        <h3>Grouped</h3>
+      </header>
+      <article>
+        <p>Selectors can be grouped into comma separated lists.</p>
+        <p></p>
+        <code>
+        h1, h2, h3 { text-align:center; }
+      </code>
+        <p>is equivalent to</p>
+        <code>
+        h1 { text-align:center; }
+h2 { text-align:center; }
+h3 { text-align:center; }
+      </code>
+        <p>An element may be selected by more than one rule:</p>
+        <code>
+          h1, h2, h3, h4, h5, h6 { color: white; background-color: red; }
+ h1 { color: yellow; }</code>
+        <p>All headings will have a red background. Level 2–6 headings will have white text. Level 1 headings will have
+          yellow text.</p>
+
+        <p>The order of the rules is significant. In the following example all headings would have white text.</p>
+        <code>
+  h1 { color: yellow; } 
+ h1, h2, h3, h4, h5, h6 { color: white; background-color: red; }
+</code>
+      </article>
+    </section>
+    <hr>
+  </main>
+</body>
+
+</html>
